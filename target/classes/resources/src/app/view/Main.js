@@ -6,36 +6,36 @@ Ext.define("Front.view.Main", {
     type: "border",
   },
   items: [
-    {
-      region: "north",
-      xtype: "toolbar",
-      items: [
-        {
-          xtype: "button",
-          text: "Agregar",
-          action: "add",
-          //   icon: "resources/src/image/book_add.png",
-        },
-        {
-          xtype: "button",
-          text: "Borrar",
-          action: "delete",
-          //   icon: "resources/src/image/book_delete.png",
-        },
-        {
-          xtype: "button",
-          text: "Editar",
-          action: "edit",
-          //   icon: "resources/src/image/book_edit.png",
-        },
-        {
-          xtype: "button",
-          text: "Generar reporte",
-          action: "report",
-          //   icon: "resources/src/image/report.png",
-        },
-      ],
-    },
+    // {
+    //   region: "north",
+    //   xtype: "toolbar",
+    //   items: [
+    //     {
+    //       xtype: "button",
+    //       text: "Agregar",
+    //       action: "add",
+    //       //   icon: "resources/src/image/book_add.png",
+    //     },
+    //     {
+    //       xtype: "button",
+    //       text: "Borrar",
+    //       action: "delete",
+    //       //   icon: "resources/src/image/book_delete.png",
+    //     },
+    //     {
+    //       xtype: "button",
+    //       text: "Editar",
+    //       action: "edit",
+    //       //   icon: "resources/src/image/book_edit.png",
+    //     },
+    //     {
+    //       xtype: "button",
+    //       text: "Generar reporte",
+    //       action: "report",
+    //       //   icon: "resources/src/image/report.png",
+    //     },
+    //   ],
+    // },
     {
       region: "west",
       xtype: "treeView",

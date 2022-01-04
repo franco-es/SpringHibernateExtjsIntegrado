@@ -10,7 +10,7 @@ Ext.define("Front.view.op.OpGrid", {
   columns: [
     {
       text: "ID",
-      dataIndex: "operation_id",
+      dataIndex: "id",
     },
     {
       text: "Operation Name",

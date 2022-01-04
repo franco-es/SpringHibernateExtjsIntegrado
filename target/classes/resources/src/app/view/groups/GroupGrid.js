@@ -1,16 +1,16 @@
-Ext.define("Front.view.op.GroupGrid", {
+Ext.define("Front.view.groups.GroupGrid", {
   extend: "Ext.grid.Panel",
   itemId: "GroupGrid",
   xtype: "GroupGrid",
   store: "GroupStore",
-  title: "Operations",
+  title: "Groups",
   layout: "fit",
-  width: 450,
+  default: [{ anchor: 100 }],
   resizable: true,
   columns: [
     {
       text: "ID",
-      dataIndex: "operation_id",
+      dataIndex: "id",
     },
     {
       text: "Group Name",

@@ -1,7 +1,7 @@
 Ext.application({
   requires: ["Ext.container.Viewport"],
   name: "Front",
-  controllers: ["UserController"],
+  controllers: ["UserController", "OperationController", "GroupController"],
   appFolder: "resources/src/app",
   launch: function () {
     Ext.create("Ext.container.Viewport", {

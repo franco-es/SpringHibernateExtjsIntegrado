@@ -1,4 +1,4 @@
-Ext.define("Front.view.op.GroupAddForm", {
+Ext.define("Front.view.groups.GroupAddForm", {
   extend: "Ext.form.Panel",
   title: "Agregar Operacion",
   xtype: "GroupAddForm",
@@ -24,6 +24,12 @@ Ext.define("Front.view.op.GroupAddForm", {
       fieldLabel: "Description",
       name: "description",
       emptyText: "Group Description",
+    },
+  ],
+  buttons: [
+    {
+      text: "Save Operation",
+      action: "SaveGroup",
     },
   ],
 });

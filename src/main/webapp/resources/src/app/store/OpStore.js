@@ -4,10 +4,10 @@ Ext.define("Front.store.OpStore", {
   model: "Front.model.OpModel",
   proxy: {
     type: "ajax",
-    url: "http://localhost:8080/spring/allOp",
+    url: "http://localhost:8080/spring/operation/allOperations",
     reader: {
       type: "json",
-      root: "users",
+      root: "operations",
     },
   },
   autoload: true,

@@ -52,6 +52,7 @@ public class UserController {
     // return userService.listAllUsers();
   }
 
+  @ResponseBody
   @RequestMapping(
     value = "/allGa",
     method = RequestMethod.GET,

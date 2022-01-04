@@ -10,31 +10,32 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
-import ar.com.dcc.springextjs.model.Grupo;
+import ar.com.dcc.springextjs.model.Operation;
 
 @Repository
-public class GroupDAO {
+public class OperationDAO {
 	
 	@Autowired
 	@Qualifier("sessionFactory")
 	private SessionFactory sessionFactory;
 	
-	
-	public void setSessionFactory(SessionFactory sf) {
+	public void setStssionFactory(SessionFactory sf) {
 		this.sessionFactory = sf;
 	}
 	
+	
 	@SuppressWarnings({ "deprecation", "unchecked" })
 	@Transactional
-	public List<Grupo> listAllGroups(){
+	public List<Operation> listAllOperation(){
 		Session session = this.sessionFactory.getCurrentSession();
-		return session.createCriteria(Grupo.class).list();
+		return session.createCriteria(Operation.class).list();
 	}
 	
+	
 	@Transactional
-	public Grupo addGroup(Grupo group) {
+	public Operation addOp(Operation op) {
 		Session session = this.sessionFactory.getCurrentSession();
-		session.save(group);
-		return group;
+		session.persist(op);
+		return op;
 	}
 }

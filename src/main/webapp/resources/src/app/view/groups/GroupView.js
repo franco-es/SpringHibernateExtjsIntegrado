@@ -1,4 +1,4 @@
-Ext.define("Front.view.op.GroupView", {
+Ext.define("Front.view.groups.GroupView", {
   extend: "Ext.container.Container",
   itemId: "GroupView",
   xtype: "GroupView",
@@ -10,29 +10,21 @@ Ext.define("Front.view.op.GroupView", {
       style: "padding 10px;",
     },
   },
-  default: {
-    xtype: "panel",
-  },
   items: [
-    {
-      //Operation Form
-      xtype: "OpAddForm",
+   {
+    //Operation Form
+      xtype: "GroupAddForm",
+      colspan: 3,
     },
-    {
-      resizable: true,
-      layout: "fit",
-      items: [
-        {
-          xtype: "OpGrid",
-        },
-        {
-          xtype: "button",
-          id: "oprefresh",
-          text: "refresh",
-          margin: 15,
-        },
-      ],
-      //xtype: "OpGrid"
-    },
+     {
+    	 rowspan: 2,
+       	 resizable: true,
+       	 layout: "fit",
+         items: [
+       {
+           xtype: "GroupGrid",
+         },
+       ],
+     },
   ],
 });

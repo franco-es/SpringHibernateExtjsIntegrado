@@ -7,5 +7,5 @@ Ext.define("Front.store.OpTypeStore", {
     { id: 2, typeOp: "B" },
     { id: 3, typeOp: "C" },
   ],
-  autoload: true,
+  //autoload: true,
 });

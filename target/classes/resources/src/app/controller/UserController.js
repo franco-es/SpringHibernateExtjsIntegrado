@@ -1,7 +1,7 @@
 Ext.define("Front.controller.UserController", {
   extend: "Ext.app.Controller",
-  models: ["UserModel", "OpModel", "OpTypeModel"],
-  stores: ["UserStore", "TreeStore", "OpStore", "OpTypeStore"],
+  models: ["UserModel"],
+  stores: ["UserStore", "TreeStore"],
   views: [
     "ExtraView",
     "Main",
@@ -10,9 +10,6 @@ Ext.define("Front.controller.UserController", {
     "user.UserByTypeWindow",
     "user.UserByTypeForm",
     "user.UserAdd",
-    "op.OpView",
-    "op.OpAddForm",
-    "op.OpGrid",
   ],
   refs: [{ ref: "UserGrid", selector: "app-main > tabpanel #UserView" }],
   init: function () {
@@ -52,6 +49,7 @@ Ext.define("Front.controller.UserController", {
     var letter = button.up("form").getForm();
 
     var opTitle = letter.getFieldValues();
+    console.log(opTitle);
     Ext.Ajax.request({
       url: `/allGa?type=${opTitle.opTitle}`,
       method: "GET",

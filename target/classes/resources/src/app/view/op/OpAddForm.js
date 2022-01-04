@@ -1,7 +1,7 @@
 Ext.define("Front.view.op.OpAddForm", {
   extend: "Ext.form.Panel",
   title: "Agregar Operacion",
-  xtype: "OpAddForm",
+  xtype: "opAddForm",
   id: "opAddForm",
   defaultType: "textfield",
   defaults: {
@@ -30,8 +30,15 @@ Ext.define("Front.view.op.OpAddForm", {
       fieldLabel: "Operation Type",
       store: "OpTypeStore",
       name: "type",
+      queryMode: "local",
       displayField: "typeOp",
       valueField: "typeOp",
+    },
+  ],
+  buttons: [
+    {
+      text: "Save Operation",
+      action: "SaveOp",
     },
   ],
 });

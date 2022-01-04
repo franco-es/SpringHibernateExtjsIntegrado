@@ -10,29 +10,22 @@ Ext.define("Front.view.op.OpView", {
       style: "padding 10px;",
     },
   },
-  default: {
-    xtype: "panel",
-  },
   items: [
     {
       //Operation Form
-      xtype: "OpAddForm",
+      xtype: "opAddForm",
+      colspan: 3,
     },
     {
+      rowspan: 2,
+      margin: 10,
       resizable: true,
       layout: "fit",
       items: [
         {
           xtype: "OpGrid",
         },
-        {
-          xtype: "button",
-          id: "oprefresh",
-          text: "refresh",
-          margin: 15,
-        },
       ],
-      //xtype: "OpGrid"
     },
   ],
 });

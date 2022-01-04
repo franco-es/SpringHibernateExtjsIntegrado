@@ -1,13 +1,13 @@
-Ext.define("Front.store.OpStore", {
+Ext.define("Front.store.GroupStore", {
   extend: "Ext.data.Store",
-  id: "opStore",
-  model: "Front.model.OpModel",
+  id: "GroupStore",
+  model: "Front.model.GroupModel",
   proxy: {
     type: "ajax",
-    url: "http://localhost:8080/spring/allOp",
+    url: "http://localhost:8080/spring/group/all",
     reader: {
       type: "json",
-      root: "users",
+      root: "groups",
     },
   },
   autoload: true,
